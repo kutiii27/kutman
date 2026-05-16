@@ -1,0 +1,299 @@
+/* Базовые сбросы и глобальные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.uni-landing {
+    background: linear-gradient(to bottom, #0f172a, #1e293b, #0f172a);
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Сетка и контейнеры */
+.container {
+    max-width: 1152px;
+    /* 6xl */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.block {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.mb-14 {
+    margin-bottom: 3.5rem;
+}
+
+/* Шапка / Герой */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    padding: 6rem 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+.accent-text {
+    color: #34d399;
+    /* emerald-400 */
+    margin-top: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* Кнопки */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .btn-group {
+        flex-direction: row;
+    }
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #10b981;
+    color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #34d399;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* О университете */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #34d399;
+}
+
+.description {
+    color: #cbd5e1;
+    font-size: 1.125rem;
+}
+
+.about-section {
+    padding: 5rem 0;
+    display: grid;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .about-section {
+        grid-template-cols: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+}
+
+/* Карточки статистики */
+.stats-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-cols: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background-color: #1e293b;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.stat-box h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #34d399;
+}
+
+.stat-box p {
+    color: #cbd5e1;
+    margin-top: 0.5rem;
+}
+
+/* Факультеты */
+.faculties-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 5rem 0;
+}
+
+.faculties-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .faculties-grid {
+        grid-template-cols: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.faculty-card {
+    background-color: #1e293b;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faculty-card:hover {
+    transform: scale(1.05);
+}
+
+.faculty-card .icon {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.faculty-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.faculty-card p {
+    color: #cbd5e1;
+}
+
+/* Преимущества */
+.advantages-section {
+    padding: 5rem 0;
+}
+
+.advantages-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .advantages-grid {
+        grid-template-cols: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.advantage-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advantage-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.advantage-card p {
+    color: #cbd5e1;
+    font-size: 1.125rem;
+}
+
+/* Подвал */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+}
